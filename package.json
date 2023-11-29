@@ -1,0 +1,28 @@
+{
+  "name": "mnemogenic",
+  "version": "1.0.1",
+  "type": "module",
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.module.js",
+  "unpkg": "dist/index.umd.js",
+  "types": "./index.d.ts",
+  "scripts": {
+    "generate-types": "npx jsdoc -t node_modules/tsd-jsdoc/dist -r src -d .",
+    "build": "npm run generate-types && microbundle",
+    "dev": "microbundle watch"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.6.11",
+    "microbundle": "^0.15.1",
+    "tsd-jsdoc": "^2.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zulhusnihariz/mnemonic-generator.git"
+  },
+  "dependencies": {
+    "bip39": "^3.1.0",
+    "bs58": "^5.0.0"
+  }
+}
